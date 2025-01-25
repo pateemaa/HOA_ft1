@@ -11,13 +11,21 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Dispose an Asset</title>
+        <link rel="stylesheet" href="styles\menu_style.css">
     </head>
     <body>
+        <div id="form-container">
         <form action = "dispose_processing.jsp">
             
             <jsp:useBean id = "A" class = "assetmanagement.assets" scope = "session"/>
-            
-            Asset: <select id = "asset_id" name = "asset_id">
+            <div id="header">
+                <h2>Dispose an Asset</h2>
+            </div>
+
+            <div class="input-lbl">
+                Asset: 
+            </div>
+                <select class="input-field" id = "asset_id" name = "asset_id">
                     <%
                         A.assetsForDisposal();
                         for(int i = 0; i < A.asset_idlist.size(); i++){
@@ -26,9 +34,10 @@
                     <%
                         }
                     %>
-                   </select><br>
-                    
-            <input type = "submit" value = "Dispose">
+                </select><br>
+            <div id="submit-btn">        
+                <input type = "submit" value = "Dispose">
+            </div>    
         </form>
     </body>
 </html>
