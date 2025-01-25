@@ -19,62 +19,108 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 
 body {
     font-family: "Poppins";
-    background-color: var(--primary);
+    background-color: var(--secondary);
+    color: var(--accent2);
+}
+
+#form-container {
+    align-items: center;
+    margin: 30px;
+}
+
+form {
+    background-color: var(--accent1);
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    width: 600px;
+    display: grid;
+    gap: 15px;
 }
 
 #header {
-    background-color: var(--primary);
-    color: var(--accent2); 
-    padding-left: 20px;
-    margin: 0px;
+    text-align: center;
+    grid-column: 1/ span 2;
+    grid-row: 1;
+}
+
+.input-label {
+    font-size: 12px;
+    color: var(--secondary);
+}
+
+.txt_area {
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid var(--secondary);
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+.fname-field {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.1name-field {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.uname-field {
+    grid-column: 1/ span 2;
+    grid-row: 3;
+}
+
+.pword-field {
+    grid-column: 1/ span 2;
+    grid-row: 4;
+}
+
+#register-btn {
+    background-color: var(--accent3);
+    color: var(--accent1);
+    border-radius: 25px;
+    padding: 7px 40px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    border-color: transparent;
+    width: 300px;
+}
+
+#reg-btn {
+    text-align: center;
+    grid-column: 1/ span 2;
+    grid-row: 5;
+}
+
+#login-btn{
+    font-size: 12px;
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
     text-align: center;
 }
 
-#content-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    padding: 5px 20px 10px;
-    gap: 20px
-    
-}
-
-#asset-menu {
-    background-color: var(--secondary);
-    border-radius: 10px;
-    padding: 15px 20px 20px;
-    box-shadow: 0 6px 20px 0 var(--box-shadow);
-}
-
-#activity-menu {
-    background-color: var(--accent1);
-    border-radius: 10px;
-    padding: 15px 20px 20px;
-    box-shadow: 0 6px 20px 0 var(--box-shadow);
-}
-
-.title-name {
-    font-weight: 700;
-    font-size: 25px;
-    color: var(--accent3);
-    margin-bottom: 10px;
-}
-
-#asset-menu a {
-    color: var(--accent1);
-    text-decoration: none;
-    font-weight: 300;
-}
-
-#activity-menu a {
+p {
+    font-size: 12px;
     color: var(--accent2);
-    text-decoration: none;
-    font-weight: 300;
+    font-weight: 400;
+    grid-column: 1/ span 2;
+    grid-row: 6;
+    text-align: center;
 }
 
-#asset-menu a:hover {
-    color: var(--accent3)
+.txt_area input:focus {
+    border: 4px solid var(--accent3);
 }
 
-#activity-menu a:hover {
-    color: var(--accent3)
+#register-btn:hover {
+    border-color: var(--accent2);
+}
+
+#login-btn:hover {
+    color: var(--accent3);
 }

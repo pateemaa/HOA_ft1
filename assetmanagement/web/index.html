@@ -5,34 +5,46 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 -->
 <html>
     <head>
-        <title>Asset Activity Management</title>
+        <title>Register | Asset Activity Management</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles\index.css">
     </head>
     <body>
-        <div id="header">
-            <h1>Asset Activity Management</h1>
-        </div>
-        
-        <a href = "pages\user_login.html"> Login </a> <br>
-        
-        <div id="content-container">
-            <div id="asset-menu">
-                <div class="title-name">Asset Menu</div>
-                <a href = "pages\register.html"> Register Asset </a> <br>
-                <a href = "updateassetinfo.jsp"> Update Asset Information </a> <br>
-                <a href = "deletewrongasset.jsp"> Deleting a wrongly encoded Asset </a> <br>
-                <a href = "disposeasset.jsp"> Dispose Asset </a> <br>
-            </div>
-            
-            <div id="activity-menu">
-                <div class="title-name">Asset Activity Menu</div>
-                <a href = "recordassetact.jsp"> Record Asset Activity </a> <br>
-                <a href = "updateassetactinfo.jsp"> Update Asset Activity Information </a> <br>
-                <a href = "compassetact.jsp"> Complete Asset Activity </a> <br>
-                <a href = "deleteact.jsp"> Delete Activity </a> <br>
-            </div>
+        <div id="form-container">
+            <form action="">
+                <div id="header">
+                    <h2>Create an Account</h2>
+                </div>
+                
+                <div class="fname-field">
+                    <label class="input-label" id="fname_lbl" for="fname">First Name</label><br>
+                    <input type="text" class="txt_area" id="fname" placeholder="Enter first name">
+                </div>
+                
+                <div class="lname-field">
+                    <label class="input-label" id="lname_lbl" for="lname">Last Name</label><br>
+                    <input type="text" class="txt_area" id="lname" placeholder="Enter last name">
+                </div>
+                
+                <div class="uname-field">
+                    <label class="input-label" id="uname_lbl" for="username">Username</label><br>
+                    <input type="text" class="txt_area" id="username" placeholder="Enter username">
+                </div>
+                
+                <div class="pword-field">
+                    <label class="input-label" id="pword_lbl" for="password">Password</label><br>
+                    <input type="password" class="txt_area" id="password" placeholder="Enter password">
+                </div>
+               
+                <p id="reg-btn">
+                <input id="register-btn" type = "submit" formaction="pages\user_login.html" value = "Create account">
+                </p>
+                <br>
+                <p> 
+                    Already have an account? <a id="login-btn" href = "pages\user_login.html"> Log in </a>
+                </p>
+            </form>
         </div>
     </body>
 </html>

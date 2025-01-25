@@ -8,7 +8,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <title>Login | Asset Activity Management</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles\user_login_style.css">
+        <link rel="stylesheet" href="..\styles\user_login_style.css">
     </head>
     <body>
         <div id="form-container">
@@ -33,7 +33,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <input type="password" id="password" placeholder="Enter password">
                 </div>
                 
-                <input id="login-btn" type = "submit" value = "Log in">
+                <input id="login-btn" type = "submit" formaction="..\pages\user_dashboard.html" value = "Log in">
+                <br>
                 <a id="forgot-pass-btn" href = " "> Forgot Password? </a>
             </form>
         </div>
