@@ -32,6 +32,14 @@ body {
     text-align: center;
 }
 
+#logout-btn {
+    font-size: 12px;
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+    text-align: right;
+}
+
 #content-container {
     display: grid;
     grid-template-columns: auto auto;
@@ -79,4 +87,8 @@ body {
 
 #activity-menu a:hover {
     color: var(--accent3)
+}
+
+#logout-btn:hover {
+    color: var(--accent3);
 }

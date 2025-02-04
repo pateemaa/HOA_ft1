@@ -5,46 +5,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 -->
 <html>
     <head>
-        <title>Register | Asset Activity Management</title>
+        <title>Asset Activity Management</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles\index.css">
     </head>
     <body>
-        <div id="form-container">
-            <form action="">
-                <div id="header">
-                    <h2>Create an Account</h2>
-                </div>
-                
-                <div class="fname-field">
-                    <label class="input-label" id="fname_lbl" for="fname">First Name</label><br>
-                    <input type="text" class="txt_area" id="fname" placeholder="Enter first name">
-                </div>
-                
-                <div class="lname-field">
-                    <label class="input-label" id="lname_lbl" for="lname">Last Name</label><br>
-                    <input type="text" class="txt_area" id="lname" placeholder="Enter last name">
-                </div>
-                
-                <div class="uname-field">
-                    <label class="input-label" id="uname_lbl" for="username">Username</label><br>
-                    <input type="text" class="txt_area" id="username" placeholder="Enter username">
-                </div>
-                
-                <div class="pword-field">
-                    <label class="input-label" id="pword_lbl" for="password">Password</label><br>
-                    <input type="password" class="txt_area" id="password" placeholder="Enter password">
-                </div>
-               
-                <p id="reg-btn">
-                <input id="register-btn" type = "submit" formaction="pages\user_login.html" value = "Create account">
-                </p>
-                <br>
-                <p> 
-                    Already have an account? <a id="login-btn" href = "pages\user_login.html"> Log in </a>
-                </p>
-            </form>
+        <div id="header">
+            <h1>Asset Activity Management</h1>
+        </div>
+        
+        <div class="button">
+        <a id="register-btn" href = "pages\user_register.html">Sign Up</a>
+        </div>
+        
+        <br>
+        
+        <div class="button">
+        <a id="login-btn" href = "pages\user_login.html">Log In</a>
         </div>
     </body>
 </html>

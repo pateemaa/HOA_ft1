@@ -12,17 +12,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     </head>
     <body>
         <div id="form-container">
-            <form action="">
+            <form action="/assetmanagement/user_login" method="POST">
                 <div id="header">
                     <h2>Welcome back!</h2>
                 </div>
                 
                 <div class="input-label">
-                    <label for="username">Username</label>
+                    <label for="username">Email</label>
                 </div>
                 
                 <div class="txt_area">
-                    <input type="text" id="username" placeholder="Enter username">
+                    <input type="text" id="email" placeholder="Enter email" name="email" required>
                 </div>
                 
                 <div class="input-label">
@@ -30,10 +30,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 </div>
                 
                 <div class="txt_area">
-                    <input type="password" id="password" placeholder="Enter password">
+                    <input type="password" id="password" placeholder="Enter password" name="password" required>
                 </div>
                 
-                <input id="login-btn" type = "submit" formaction="..\pages\user_dashboard.html" value = "Log in">
+                <input id="login-btn" type = "submit" value = "Log in">
                 <br>
                 <a id="forgot-pass-btn" href = " "> Forgot Password? </a>
             </form>

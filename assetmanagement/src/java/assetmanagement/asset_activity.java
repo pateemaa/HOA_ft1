@@ -39,7 +39,7 @@ public class asset_activity {
     public int assetsFor_activityUpdate(){
         try{
             Connection conn;
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hoadb?useTimezone=true&serverTimezone=UTC&user=root");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hoadb?useTimezone=true&serverTimezone=UTC&user=user1&password=dbconnect");
             System.out.println("Connection Successful");
             
             PreparedStatement pstmt = conn.prepareStatement("SELECT asset_id FROM asset_activity ORDER BY asset_id");
@@ -69,7 +69,7 @@ public class asset_activity {
     public int assetsFor_complete(){
         try{
             Connection conn;
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hoadb?useTimezone=true&serverTimezone=UTC&user=root");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HOADB?user=user1&password=dbconnect");
             System.out.println("Connection Successful");
             
             PreparedStatement pstmt = conn.prepareStatement("SELECT asset_id FROM asset_activity WHERE status = 'O' ORDER BY asset_id");
@@ -99,7 +99,7 @@ public class asset_activity {
     public int assetIdFor_deleteAct(){
         try{
             Connection conn;
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hoadb?useTimezone=true&serverTimezone=UTC&user=root");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HOADB?user=user1&password=dbconnect");
             System.out.println("Connection Successful");
             
             PreparedStatement pstmt = conn.prepareStatement("SELECT asset_id FROM asset_activity ORDER BY asset_id");
@@ -129,7 +129,7 @@ public class asset_activity {
     public int activityDateFor_deleteAct(){
         try{
             Connection conn;
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hoadb?user=root");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HOADB?user=user1&password=dbconnect");
             System.out.println("Connection Successful");
             
             PreparedStatement pstmt = conn.prepareStatement("SELECT activity_date FROM asset_activity");
@@ -161,7 +161,7 @@ public class asset_activity {
         
         try{
             Connection conn;
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hoadb?user=root");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HOADB?user=user1&password=dbconnect");
             System.out.println("Connection Successful");
             
             PreparedStatement pstmt = conn.prepareStatement("INSERT INTO asset_activity(asset_id, activity_date, activity_description, tent_start, tent_end, act_start, act_end, cost, status) "
@@ -197,7 +197,7 @@ public class asset_activity {
     public int update_activity(){
          try{
             Connection conn;
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hoadb?user=root");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HOADB?user=user1&password=dbconnect");
             System.out.println("Connection Successful");
             
             PreparedStatement pstmt = conn.prepareStatement("UPDATE asset_activity SET activity_date = ?, activity_description = ?, tent_start = ?, tent_end = ?, act_start = ?, act_end = ?, cost = ?, status = ? WHERE asset_id = ?");
@@ -229,7 +229,7 @@ public class asset_activity {
     public int complete_activity(){
          try{
             Connection conn;
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hoadb?user=root");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HOADB?user=user1&password=dbconnect");
             System.out.println("Connection Successful");
             
             PreparedStatement pstmt = conn.prepareStatement("UPDATE asset_activity SET status = 'C'");
@@ -254,7 +254,7 @@ public class asset_activity {
     public int delete_activity(){
          try{
             Connection conn;
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hoadb?user=root");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HOADB?user=user1&password=dbconnect");
             System.out.println("Connection Successful");
             
             PreparedStatement pstmt = conn.prepareStatement("DELETE FROM asset_activity WHERE asset_id = ? AND activity_date = ?");

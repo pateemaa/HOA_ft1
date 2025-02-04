@@ -42,7 +42,7 @@ public class asset_transactions {
      public int activityIdTo_record(){
         try{
             Connection conn;
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HOADB?user=root");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HOADB?user=user1&password=dbconnect");
             System.out.println("Connection Successful");
             
             PreparedStatement pstmt = conn.prepareStatement("SELECT asset_id FROM asset_transactions WHERE transaction_type = 'A'");
@@ -72,7 +72,7 @@ public class asset_transactions {
     public int activityDateTo_record(){
         try{
             Connection conn;
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HOADB?user=root");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HOADB?user=user1&password=dbconnect");
             System.out.println("Connection Successful");
             
             PreparedStatement pstmt = conn.prepareStatement("SELECT transaction_date FROM asset_transactions WHERE transaction_type = 'A'");

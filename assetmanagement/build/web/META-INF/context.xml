@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/assetmanagement"/>
+<Context 
+    path="/assetmanagement"
+    name="jdbc/HOADB"
+    auth="Conatiner"
+    type="javax.sql.DataSource"
+    maxTotal="100"
+    maxIdle="30"
+    maxWaitMillis="10000"
+    username="user1"
+    password="dbconnect"
+    driverClassName="com.mysql.cj.jdbc.Driver"
+    url="jdbc:mysql://127.0.0.1:3306/HOADB"
+/>

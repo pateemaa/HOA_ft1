@@ -47,7 +47,7 @@ public class assets {
         
         try{
             Connection conn;
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hoadb?user=root&password=");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HOADB?user=user1&password=dbconnect");
             System.out.println("Connection Successful");
             
             PreparedStatement pstmt = conn.prepareStatement("SELECT MAX(asset_id) + 1 AS newID FROM assets");
@@ -91,7 +91,7 @@ public class assets {
     public int assetsToUpdate(){
         try{
             Connection conn;
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hoadb?user=root&password=");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HOADB?user=user1&password=dbconnect");
             System.out.println("Connection Successful");
             
             PreparedStatement pstmt = conn.prepareStatement("SELECT asset_id FROM assets ORDER BY asset_id");
@@ -120,7 +120,7 @@ public class assets {
         
         try{
             Connection conn;
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hoadb?user=root&password=");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HOADB?user=user1&password=dbconnect");
             System.out.println("Connection Successful");
             
             PreparedStatement pstmt = conn.prepareStatement("UPDATE assets "
@@ -169,7 +169,7 @@ public class assets {
     public int assetsForDelete(){
         try{
             Connection conn;
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hoadb?user=root&password=");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HOADB?user=user1&password=dbconnect");
             System.out.println("Connection Successful");
             
             PreparedStatement pstmt = conn.prepareStatement("SELECT asset_id FROM assets WHERE asset_id NOT IN (SELECT asset_id FROM asset_transactions) AND forrent = 0 ORDER BY asset_id");
@@ -196,7 +196,7 @@ public class assets {
     public int delete_asset(){
         try{
             Connection conn;
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hoadb?user=root&password=");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HOADB?user=user1&password=dbconnect");
             System.out.println("Connection Successful");
             
             PreparedStatement pstmt = conn.prepareStatement("DELETE FROM assets WHERE asset_id = ?");
@@ -218,7 +218,7 @@ public class assets {
     public int assetsForDisposal(){
         try{
             Connection conn;
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hoadb?user=root&password=");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HOADB?user=user1&password=dbconnect");
             System.out.println("Connection Successful");
             
             PreparedStatement pstmt = conn.prepareStatement("SELECT asset_id FROM assets WHERE status = 'S' ORDER BY asset_id");
@@ -245,7 +245,7 @@ public class assets {
     public int dispose_asset(){
         try{
             Connection conn;
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hoadb?user=root&password=");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HOADB?user=user1&password=dbconnect");
             System.out.println("Connection Successful");
             
             PreparedStatement pstmt = conn.prepareStatement("UPDATE assets SET status = 'X' WHERE status = 'S'");
@@ -265,24 +265,24 @@ public class assets {
     
     public static void main(String args[]){
         assets A = new assets();
-        A.asset_name = "Table";
-        A.asset_description = "Modern Table";
-        A.acquisition_date = "2022-01-01";
-        A.forrent = false;
-        A.asset_value = 100.00;
-        A.type_asset = "F";
-        A.status = "W";
-        A.loc_lattitude = 101.4350;
-        A.loc_longiture = 101.4360;
-        A.hoa_name = "SJH";
-        A.enclosing_asset = null;
-        A.asset_id = 5011;
+//        A.asset_name = "Table";
+//        A.asset_description = "Folding Table";
+//        A.acquisition_date = "2025-01-01";
+//        A.forrent = true;
+//        A.asset_value = 100.00;
+//        A.type_asset = "F";
+//        A.status = "W";
+//        A.loc_lattitude = 101.4350;
+//        A.loc_longiture = 101.4360;
+//        A.hoa_name = "SJH";
+//        A.enclosing_asset = null;
+        A.asset_id = 5013;
         
 //        A.register_asset();
-        A.update_asset();
+//        A.update_asset();
         
 //        A.dispose_asset();
-//        A.delete_asset();
+        A.delete_asset();
     }
 
 
