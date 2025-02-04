@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../public/css/register-style.css">
+        <script defer src="public/js/script.js"></script>
+        <title>Register | Asset Activity Management</title>
+    </head>
+    <body>
+        <div id="form-container">
+            <form id="registration_form" action="" method="">
+                <div id="header">
+                    <h2>Create an Account</h2>
+                </div>
+                
+                <div class="dp-field">
+                    <input type="image" id="dp_img" src="../public/images/avatar-default.png" name="dp_img" required>
+                </div>
+                
+                <div class="fname-field">
+                    <label class="input-label" id="fname_lbl" for="fname">Full Name</label><br>
+                    <input type="text" class="txt_area" id="fname" placeholder="Enter full name" name="full_name" required>
+                </div>
+                
+                <div class="phone-field">
+                    <label class="input-label" id="phone" for="phone">Phone Number</label><br>
+                    <input type="text" class="txt_area" id="phone" placeholder="Enter phone number" name="phone_number" required>
+                </div>
+                
+                <div class="email-field">
+                    <label class="input-label" id="email" for="email">Email</label><br>
+                    <input type="email" class="txt_area" id="email" placeholder="Enter email" required>
+                </div>
+                
+                <div class="pword-field">
+                    <label class="input-label" id="pword_lbl" for="password">Password</label><br>
+                    <input type="password" class="txt_area" id="password" placeholder="Enter password" name="password" required>
+                </div>
+               
+                <p id="reg-btn">
+                <input id="register-btn" type = "submit" formaction="login.html" value = "Create account">
+                </p>
+                <br>
+                <p> 
+                    Already have an account? <a id="login-btn" href = "login.html"> Log in </a>
+                </p>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Register Asset</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../public/css/menu-style.css">
+    </head>
+    <body>
+        <div id="back">
+            <a id="back-btn" href = "dashboard.html"> Back </a>
+        </div>
+
+        <div id="form-container">
+            <form action = " ">
+                <div id="header">
+                        <h2>Register an Asset</h2>
+                </div>
+
+                <div class="input-lbl">
+                    Asset Name:         <br>
+                    <input type = "text" class="input-field" id = "asset_name" name = "asset_name" required>
+                </div>
+
+                <div class="input-lbl">
+                    Asset Description:  <br>
+                    <input type = "text" class="input-field" id = "asset_description" name = "asset_description" required>
+                </div>
+
+                <div class="input-lbl">
+                    Acquisition Date (YYYY-MM-DD):   <br>
+                    <input type = "text" class="input-field" id = "acquisition_date" name = "acquisition_date" required>
+                </div>
+
+                <div class="input-lbl">
+                    <label for="forrent">For Rent: </label>          <br>
+                    <select class="input-field" id = "forrent" name = "forrent" required>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+
+                <div class="input-lbl">
+                    Asset Value:        <br>
+                    <input type = "double" class="input-field" id = "asset_value" name = "asset_value" required>
+                </div>
+
+                <div class="input-lbl">
+                    <label for="type_asset">Asset Type: </label>        <br>
+                    <select class="input-field" id = "type_asset" name = "type_asset" required>
+                        <option value="F">Furniture & Fixtures</option>
+                        <option value="E">Equipment</option>
+                        <option value="P">Property</option>
+                        <option value="O">Others</option>
+                    </select>
+                </div>
+
+                <div class="input-lbl">
+                    <label for="status">Status: </label>            <br>
+                    <select class="input-field" id = "status" name = "status" required>
+                        <option value="W">Working</option>
+                        <option value="D">Deteriorated</option>
+                        <option value="P">For Repair</option>
+                        <option value="S">For Disposal</option>
+                        <option value="X">Disposed</option>
+                    </select>
+                </div>
+
+                <div class="input-lbl">
+                    Location Latitude:  <br>
+                    <input type = "double" class="input-field" id = "loc_lattitude" name = "loc_lattitude" required>
+                </div>
+
+                <div class="input-lbl">
+                    Location Longitude: <br>
+                    <input type = "double" class="input-field" id = "loc_longiture" name = "loc_longiture" required>
+                </div>
+
+                <div class="input-lbl">
+                    HOA Name:           <br>
+                    <input type = "text" class="input-field" id = "hoa_name" name = "hoa_name" required>
+                </div>
+
+                <div class="input-lbl">
+                    Enclosing Asset:    <br>
+                    <input type = "Integer" class="input-field" id = "enclosing_asset" name = "enclosing_asset">
+                </div>
+
+                <div id="submit-btn">
+                    <input type = "submit" value = "Submit">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
