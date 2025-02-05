@@ -4,12 +4,7 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 const saltRounds = 12;
 
-const whiteSpaceRegex = /^\s*$/
-const validImageTypes = ['image/jpeg', 'image/png'];    // for file validation
-const validPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{12,64}$/;
-const validEmailRegex = /^[a-zA-Z0-9]+(?:[_.-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*\.[a-zA-Z]{2,}$/; //replace with your own regex
-const phoneNumber = /^0{0,1}9[0-9]{9}$/;
-const scriptRegex = /^[a-zA-Z0-9_ ]+$/
+const rateLimit = require('express-rate-limit');
 
 const limiter = rateLimit({ // counts failed login attempts
     windowMs: 15 * 60 * 1000, // 15 minutes before reset
@@ -25,10 +20,21 @@ const limiter = rateLimit({ // counts failed login attempts
     skipSuccessfulRequests: true
 });
 
-const imageSignatures = {
-    'JPEG': '\xFF\xD8\xFF',
-    'PNG': '\x89\x50\x4E\x47\x0D\x0A\x1A\x0A'
-}
+router.get('/', (req, res) => {
+    res.redirect('/login');
+});
+
+
+router.get('/login', (req, res) => {
+    // Doesn't store cache to avoid pressing back button even after login/logout
+    res.setHeader('Cache-Control', 'no-store, must-revalidate');
+
+    if (req.session.user) {
+        res.redirect('/home');
+    } else {
+        res.render('login');
+    }
+});
 
 router.get('/logout', (req, res) => {
     req.session.destroy();

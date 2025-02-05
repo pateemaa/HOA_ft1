@@ -7,23 +7,7 @@ const express = require('express');
 
 // express-session
 const session = require('express-session');
-const fs = require('fs');
-const https = require('https');
-
-
 const app = express();
-
-const key = fs.readFileSync('./ssl_certs/key.pem');
-const cert = fs.readFileSync('./ssl_certs/cert.pem');
-
-const options = {
-    key: key,
-    cert: cert,
-     // If you set a passphrase while creating the certificate
-  };
-  
-
-
 
 // set session middleware
 app.use(session({
@@ -80,15 +64,6 @@ app.use(express.static('public'));
 app.use('/', routes);
 
 
-const server = https.createServer(options, app);
-
-// commented this for app.js
-//app.listen(port, () => {
-  // log(`Listening on port ${port}`)
-//});
-
-// Start server
-// Start HTTPS server
-server.listen(port, () => {
-    console.log(`Server is running on https://localhost:${port}`);
- });
+app.listen(port, () => {
+  log(`Listening on port ${port}`)
+});
