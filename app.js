@@ -13,8 +13,8 @@ const https = require('https');
 
 const app = express();
 
-const key = fs.readFileSync('./certs/key.pem');
-const cert = fs.readFileSync('./certs/cert.pem');
+const key = fs.readFileSync('./ssl_certs/key.pem');
+const cert = fs.readFileSync('./ssl_certs/cert.pem');
 
 const options = {
     key: key,
@@ -52,10 +52,10 @@ app.use(upload.single('file-upload'));
 const exphbs = require('express-handlebars');
 
 // routes
-const routes = require('./routes/routes.js');
+const routes = require('./route/route.js');
 
 // sql database
-const user_db = require('./models/userSchema.js');
+const user_db = require('./model/database.js');
 app.use((req, _, next) => {
     req.db = user_db; // Inject the database connection into req object
     next();
