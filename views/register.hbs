@@ -9,13 +9,14 @@
     </head>
     <body>
         <div id="form-container">
-            <form id="registration_form" action="" method="">
+            <form id="registration_form" action="/register" method="POST">
                 <div id="header">
                     <h2>Create an Account</h2>
                 </div>
-                
-                <div class="dp-field">
-                    <input type="image" id="dp_img" src="../public/images/avatar-default.png" name="dp_img" required>
+
+                <div class="profpic-field">
+                    <label class="input-label" id="profpic_lbl" for="profile_picture">Upload Profile Picture</label><br>
+                    <input type="file" class="txt_area" id="profile_picture" name="profile_picture" accept="image/*" required>
                 </div>
                 
                 <div class="fname-field">
@@ -24,31 +25,26 @@
                 </div>
                 
                 <div class="phone-field">
-                    <label class="input-label" id="phone" for="phone">Phone Number</label><br>
+                    <label class="input-label" id="phone_lbl" for="phone">Phone Number</label><br>
                     <input type="text" class="txt_area" id="phone" placeholder="Enter phone number" name="phone_number" required>
                 </div>
                 
                 <div class="email-field">
-                    <label class="input-label" id="email" for="email">Email</label><br>
-                    <input type="email" class="txt_area" id="email" placeholder="Enter email" required>
-                </div>
-
-                <div class="profpic-field">
-                    <label class="input-label" id="profpic_lbl" for="profile_picture">Upload Profile Picture</label><br>
-                    <input type="file" class="txt_area" id="profile_picture" name="profile_picture" accept="image/*" required>
+                    <label class="input-label" id="email_lbl" for="email">Email</label><br>
+                    <input type="email" class="txt_area" id="email" placeholder="Enter email" name="email" required>
                 </div>
                 
                 <div class="pword-field">
                     <label class="input-label" id="pword_lbl" for="password">Password</label><br>
                     <input type="password" class="txt_area" id="password" placeholder="Enter password" name="password" required>
                 </div>
-               
+
                 <p id="reg-btn">
                 <input id="register-btn" type = "submit" formaction="login.html" value = "Create account">
                 </p>
                 <br>
                 <p> 
-                    Already have an account? <a id="login-btn" href = "login.html"> Log in </a>
+                    Already have an account? <a id="login-btn" href = "/login"> Log in </a>
                 </p>
             </form>
         </div>

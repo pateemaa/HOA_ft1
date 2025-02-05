@@ -30,7 +30,7 @@ router.get('/login', (req, res) => {
     res.setHeader('Cache-Control', 'no-store, must-revalidate');
 
     if (req.session.user) {
-        res.redirect('/home');
+        res.redirect('/dashboard');
     } else {
         res.render('login');
     }
@@ -52,3 +52,5 @@ router.post('/logout', (req, res) => {
         res.redirect('/login');
     }
 });
+
+module.exports = router;

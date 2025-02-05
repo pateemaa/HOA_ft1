@@ -33,6 +33,7 @@ body {
     margin-right: 20px;
     margin-bottom: 10px;
     font-size: 16px;
+    border: none;
 }
 
 #content-container {

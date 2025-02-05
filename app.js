@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const path = require('path');
+// const path = require('path');
 
 // express
 const express = require('express');
@@ -65,5 +65,5 @@ app.use('/', routes);
 
 
 app.listen(port, () => {
-  log(`Listening on port ${port}`)
+  console.log(`Listening on port ${port}`)
 });

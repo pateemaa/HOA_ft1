@@ -35,16 +35,8 @@ form {
     grid-row: 1;
 }
 
-.dp-field {
+.profpic-field {
     grid-row: 2;
-}
-
-#dp_img {
-    border-radius: 50%;
-    height: 80px;
-    width: 80px;
-    display: block;
-    margin: auto;
 }
 
 .input-label {
@@ -74,12 +66,8 @@ form {
     grid-row: 5;
 }
 
-.profpic-field {
-    grid-row: 6;
-}
-
 .pword-field {
-    grid-row: 7;
+    grid-row: 6;
 }
 
 #register-btn {
@@ -100,7 +88,7 @@ form {
 
 #reg-btn {
     text-align: center;
-    grid-row: 8;
+    grid-row: 7;
 }
 
 #login-btn{
@@ -115,7 +103,7 @@ p {
     font-size: 12px;
     color: var(--accent2);
     font-weight: 400;
-    grid-row: 9;
+    grid-row: 8;
     text-align: center;
 }
 
