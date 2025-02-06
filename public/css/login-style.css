@@ -16,7 +16,7 @@ body {
 
 #form-container {
     align-items: center;
-    margin: 30px;
+    margin: 90px;
 }
 
 form {
@@ -89,19 +89,11 @@ form {
     
 }
 
-#register-link {
-    background-color: var(--accent3);
-    color: var(--accent1);
-    border-radius: 25px;
-    padding: 7px 40px;
-    font-weight: 600;
-    font-size: 14px;
-    text-align: center;
-    border-color: transparent;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
+#register-btn {
+    margin-left: 5px;
+    color: var(--accent3);
 }
 
-#register-link:hover {
-    border-color: var(--accent2);
+#register-btn:hover {
+    
 }
