@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-:root{
+:root {
   --primary: #F1F0F0;
   --secondary: #0B6D5C;
   --accent1: white;
@@ -43,6 +43,7 @@ form {
     border: 2px solid var(--secondary);
     padding: 5px;
     margin-bottom: 20px;
+    width: 80%;
 }
 
 #login-btn {
@@ -54,6 +55,8 @@ form {
     font-size: 14px;
     text-align: center;
     border-color: transparent;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
 .txt_area input:focus {
@@ -61,5 +64,44 @@ form {
 }
 
 #login-btn:hover {
+    border-color: var(--accent2);
+}
+
+#space {
+    padding: 10px;  
+}
+
+/* Register Section */
+#register-section {
+    text-align: center;
+    background-color: var(--accent1);
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 70px;
+}
+
+#register-section p {
+    font-size: 14px;
+    color: var(--accent2);
+    margin-bottom: 5px;
+    
+}
+
+#register-link {
+    background-color: var(--accent3);
+    color: var(--accent1);
+    border-radius: 25px;
+    padding: 7px 40px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    border-color: transparent;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#register-link:hover {
     border-color: var(--accent2);
 }
