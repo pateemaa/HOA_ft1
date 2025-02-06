@@ -9,7 +9,7 @@
     </head>
     <body>
         <div id="form-container">
-            <form id="registration_form" action="/register" method="POST">
+            <form id="registration_form" action="/register" method="POST" enctype="multipart/form-data">
                 <div id="header">
                     <h2>Create an Account</h2>
                 </div>
@@ -40,7 +40,7 @@
                 </div>
 
                 <p id="reg-btn">
-                <input id="register-btn" type = "submit" formaction="login.html" value = "Create account">
+                <input id="register-btn" type = "submit" formaction="/register" value = "Create account">
                 </p>
                 <br>
                 <p> 
