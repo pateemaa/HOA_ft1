@@ -68,8 +68,14 @@ router.get('/register', (req, res) => {
 });
 
 router.post('/register', upload.single('profile_picture'), async (req, res) => {
+    res.setHeader('Cache-Control', 'no-store, must-revalidate');
     try {
-        const { full_name, email, phone_number, password } = req.body;
+        const user = {
+            full_name: req.body.full_name,
+            email: req.body.email,
+            password: req.body.password,
+            phone_number: req.body.phone_number
+        }
         const profilePic = req.file;
         let errors = [];
 
@@ -82,11 +88,13 @@ router.post('/register', upload.single('profile_picture'), async (req, res) => {
         if (errors.length > 0) {
             return res.render('register', { error: errors.join(" ") });
         }
+        // DELETE !!!! AFTER OK
+        console.log(user.password);
 
-        const hashedPassword = await bcrypt.hash(password, saltRounds);
+        const hashedPassword = await bcrypt.hash(user.password, saltRounds);
 
         const sql = `INSERT INTO users (profile_picture, full_name, email, phone_number, password) VALUES (?, ?, ?, ?, ?)`;
-        const values = [profilePic.buffer, full_name, email, phone_number, hashedPassword];
+        const values = [profilePic.buffer, user.full_name, user.email, user.phone_number, hashedPassword];
 
         req.db.query(sql, values, (err) => {
             if (err) {
